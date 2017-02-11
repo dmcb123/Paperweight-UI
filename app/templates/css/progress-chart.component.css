@@ -1,0 +1,9 @@
+.chart-area {
+    border: solid;
+    border-width: 1px;
+    border-color: lightgray;
+}
+
+.chart-options {
+    padding: 5px;
+}

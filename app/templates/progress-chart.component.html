@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="../templates/css/progress-chart.component.css">
+<div class="container-fluid chart col-md-10 col-md-offset-1" >
+    <div class="chart-area col-md-12">
+        <div class="chart-options col-md-11 col-md-offset-0.5">
+            <div class="col-md-2 chart-options-section ">
+                <select [ngModel]="currentExercise" (ngModelChange)="updateExercise($event)" class="list-group col-md-12 exercise-list chart-option">
+                    <option [ngValue]="exerciseName" *ngFor="let exerciseName of exerciseList" class="list-group-item exercise-list-item">{{exerciseName}}</option>
+                </select>
+            </div>
+            
+            <div class="col-md-5 chart-options-section chart-options-reps">
+                <h4 class="col-md-6 chart-option-header list-group-item-heading chart-option">Rep Range</h4>
+                <div class="col-md-3 chart-option">
+                    <input class="range-picker" [(ngModel)]="repsFrom" (ngModelChange)="updateReps($event)" type="number" placeholder="From"/>
+                </div>
+                <div class="col-md-3 chart-option">
+                    <input class="range-picker" [(ngModel)]="repsTo" (ngModelChange)="updateReps($event)" type="number" placeholder="To"/></div>
+            </div>
+            
+            <div class="col-md-5 chart-options-section chart-options-date">
+                <h4 class="col-md-6 chart-option-header list-group-item-heading chart-option">Date Range</h4>
+                <div class="col-md-3 chart-option">
+                    <input class="range-picker" [(ngModel)]="dateFrom" (ngModelChange)="updateDates($event)" type=date value="{{dateFrom | date: 'dd/MM/yyyy'}}"/>
+                </div>
+                <div class="col-md-3 chart-option">
+                    <input class="range-picker" [(ngModel)]="dateTo" (ngModelChange)="updateDates($event)" type="date" value="{{dateTo | date:'yyyy-MM-dd'}}"/>
+                </div>
+            </div>
+        </div>
+        <chart class="col-md-12" [options]="options"></chart>
+    </div>
+</div>

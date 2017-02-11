@@ -1,0 +1,178 @@
+<div class="container-fluid">
+    <div class="jumbotron col-md-offset-2 col-md-8">
+        <section>
+            <h2 class="col-md-12">User Stats</h2>
+            <div>
+                <p class="col-md-3">Username: dmcb123</p>
+                <p class="col-md-3">Height: 5'8"</p>
+                <p class="col-md-3">Weight: 70kg</p>
+                <p class="col-md-3">Age: 22</p>
+            </div>
+            <div>
+                <p class="col-md-3">Bench Press: 105kg</p>
+                <p class="col-md-3">Deadlift: 180kg</p>
+                <p class="col-md-3">Overhead Press: 70kg</p>
+                <p class="col-md-3">Squat: 145kg</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="col-md-offset-2 col-md-8">
+        <section>
+            <h2 class='text-center'>Training Split</h2>
+            <table class="table table-bordered">
+                <tr>
+                    <th (click)="updateSelectedSplit(split)" class='col-md-3 training-split-cell text-center' *ngFor="let split of trainingSplit">{{split}}</th>
+            </table>
+        </section>
+        <div>
+            <table class="table table-bordered table-striped col-md-12">
+                <thead>
+                    <tr>
+                        <th class="col-md-4">Exercise</th>
+                        <th class="col-md-4">Sets</th>
+                        <th class="col-md-4">Reps</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let exercise of splitRoutine">
+                        <td>{{exercise}}</td>
+                        <td>4</td>
+                        <td>8</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-8 col-md-offset-2 row">
+    <h2>Time Line</h2>
+</div>
+<div class="col-md-8 col-md-offset-2 qa-message-list" id="wallmessages">
+    <div class="message-item" id="m16">
+        <div class="message-inner">
+            <div class="message-head clearfix">
+                <div class="avatar pull-left">
+                    <a href="./index.php?qa=user&qa_1=Oleg+Kolesnichenko"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a>
+                </div>
+                <div class="user-detail">
+                    <h5 class="handle">David McBride</h5>
+                    <div class="post-meta">
+                        <div class="asker-meta">
+                            <span class="qa-message-what"></span>
+                            <span class="qa-message-when">
+                                    <span class="qa-message-when-data">Jan 21 2017</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="qa-message-content">
+                <div class="qa-message-who">
+                    <span class="qa-message-who-data">Split: Chest + Triceps</span>
+                </div>
+                <div class="qa-message-who">
+                    <span class="qa-message-who-data">New PR: Bench Press 110kg</span>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-thumbs-up"></span> Like
+                    </button>
+                
+                
+                    <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-comment"></span> Comment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="message-item" id="m9">
+        <div class="message-inner">
+            <div class="message-head clearfix">
+                <div class="avatar pull-left">
+                    <a href="./index.php?qa=user&qa_1=amiya"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a>
+                </div>
+                <div class="user-detail">
+                    <h5 class="handle">James Baldwin</h5>
+                    <div class="post-meta">
+                        <div class="asker-meta">
+                            <span class="qa-message-what"></span>
+                            <span class="qa-message-when">
+                                    <span class="qa-message-when-data">Nov 24, 2013</span>
+                            </span>
+                            <span class="qa-message-who">
+                                    <span class="qa-message-who-pad">by </span>
+                            <span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=amiya">amiya</a></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="qa-message-content">
+                Nice theme . Excellent one .
+            </div>
+        </div>
+    </div>
+
+    <div class="message-item" id="m7">
+        <div class="message-inner">
+            <div class="message-head clearfix">
+                <div class="avatar pull-left">
+                    <a href="./index.php?qa=user&qa_1=russell"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a>
+                </div>
+                <div class="user-detail">
+                    <h5 class="handle">Jordan Moore</h5>
+                    <div class="post-meta">
+                        <div class="asker-meta">
+                            <span class="qa-message-what"></span>
+                            <span class="qa-message-when">
+                                    <span class="qa-message-when-data">Oct 25, 2013</span>
+                            </span>
+                            <span class="qa-message-who">
+                                    <span class="qa-message-who-pad">by </span>
+                            <span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=russell">russell</a></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="qa-message-content">
+                Nullam porta leo vitae ipsum feugiat viverra. In sed placerat mi. Nullam euismod, quam in euismod rhoncus, tellus velit posuere
+                tortor, non cursus nunc velit et lacus.
+            </div>
+        </div>
+    </div>
+
+    <div class="message-item" id="m6">
+        <div class="message-inner">
+            <div class="message-head clearfix">
+                <div class="avatar pull-left">
+                    <a href="./index.php?qa=user&qa_1=juggornot"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a>
+                </div>
+                <div class="user-detail">
+                    <h5 class="handle">Joe Ringham</h5>
+                    <div class="post-meta">
+                        <div class="asker-meta">
+                            <span class="qa-message-what"></span>
+                            <span class="qa-message-when">
+                                    <span class="qa-message-when-data">Oct 24, 2013</span>
+                            </span>
+                            <span class="qa-message-who">
+                                    <span class="qa-message-who-pad">by </span>
+                            <span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=juggornot">juggornot</a></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="qa-message-content">
+                Integer vitae arcu vitae ligula Cras vestibulum suscipit odio ac dapibus. In hac habitasse platea dictumst. Cras pulvinar
+                erat et nunc fringilla, quis molestie
+            </div>
+        </div>
+    </div>
+</div>

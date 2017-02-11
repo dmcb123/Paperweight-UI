@@ -1,0 +1,19 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Paperweight</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li [routerLinkActive]="['active']"><a href="#" routerLink="/home"      routerLinkActive="active">Home</a></li>
+            <li [routerLinkActive]="['active']"><a href="#" routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+            <li [routerLinkActive]="['active']"><a href="#">Profile</a></li> 
+            <li [routerLinkActive]="['active']"><a href="#">Settings</a></li> 
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Sign Up</a></li>
+            <li [routerLinkActive]="['active']"><a href="#" routerLink="/login" routerLinkActive="active">Login</a></li>
+        </ul>
+    </div>
+</nav>
+<router-outlet class=" col-md-12 router-outlet"></router-outlet>
+
